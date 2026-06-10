@@ -178,7 +178,8 @@ function ProblemSection() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-background/30" />
+          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute inset-0 bg-gradient-to-l from-white/40 to-transparent" />
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
             <div className="text-xs font-semibold text-muted-foreground mb-3">
@@ -194,7 +195,7 @@ function ProblemSection() {
             </p>
             <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
 
-            <p className="mt-7 text-xl md:text-2xl font-extrabold leading-9 bg-gradient-to-l from-primary to-accent bg-clip-text text-transparent">
+            <p className="mt-7 text-xl md:text-2xl font-extrabold leading-9 bg-gradient-to-l from-accent via-accent to-primary bg-clip-text text-transparent">
               در دبی پروژه زیاد است؛
               <br />
               اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
@@ -214,7 +215,7 @@ function ProblemSection() {
               ))}
             </div>
 
-            <div className="mt-7 flex flex-wrap items-center gap-4">
+            <div className="mt-7 flex flex-col items-start gap-2">
               <a href="#qualify" className="btn-primary">
                 <Filter className="w-5 h-5" />
                 قبل از خرید، شرایط خودتان را بررسی کنید

@@ -10,7 +10,7 @@ import { Footer } from "@/components/site/Footer";
 import { MobileBottomNav } from "@/components/site/MobileBottomNav";
 import { QualifyForm } from "@/components/site/QualifyForm";
 import heroAdvisor from "@/assets/hero-advisor.jpg";
-import problemAdvisor from "@/assets/problem-advisor.jpg";
+import problemSectionBg from "@/assets/Problem image.png";
 import dubaiSkyline from "@/assets/dubai-skyline.jpg";
 
 const WHATSAPP_URL = "https://wa.me/971507657477";
@@ -169,73 +169,61 @@ function ProblemSection() {
   return (
     <section className="mt-24 md:mt-32">
       <div className="container-page">
-        <div className="relative rounded-3xl bg-gradient-to-b from-surface to-background border border-border overflow-hidden p-6 sm:p-10 md:p-14">
-          {/* Decorative bubble */}
-          <div className="absolute -top-16 -left-16 w-72 h-72 rounded-full bg-primary/10 blur-3xl" />
-          <div className="absolute top-8 left-10 w-24 h-24 rounded-full bg-[oklch(0.7_0.12_240)]/15 blur-2xl" />
+        <div className="relative overflow-hidden rounded-3xl py-14 md:py-20 px-6 sm:px-10 md:px-14">
+          {/* Background image */}
+          <img
+            src={problemSectionBg}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Overlay for readability */}
+          <div className="absolute inset-0 bg-background/85" />
 
-          <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Image side (left in RTL) */}
-            <div className="order-2 lg:col-span-5 relative">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface-muted">
-                <img
-                  src={problemAdvisor}
-                  alt="مشاور در حال بررسی گزینه‌های ملک در دبی"
-                  loading="lazy"
-                  width={1024}
-                  height={1280}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute top-4 right-4 text-6xl md:text-7xl font-black text-primary/30 leading-none select-none">؟</div>
+          <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
+            <div className="text-xs font-semibold text-muted-foreground mb-3">
+              بخش ۲ | مسئله
+            </div>
+            <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-[1.2]">
+              مشکل، کمبود ملک نیست؛
+              <br />
+              <span className="text-foreground">انتخاب اشتباه است</span>
+            </h2>
+            <p className="mt-4 text-sm md:text-base font-semibold text-muted-foreground">
+              بازتعریف روان‌شناسی تصمیم
+            </p>
+            <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
+
+            <div className="mt-7 relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft via-background to-surface p-6 md:p-7 text-center shadow-soft">
+              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-l from-transparent via-primary/30 to-transparent" />
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background text-primary shadow-soft ring-1 ring-primary/15">
+                <Target className="w-6 h-6" />
               </div>
+              <p className="mx-auto max-w-3xl text-base md:text-xl font-extrabold text-primary leading-9">
+                در دبی پروژه زیاد است؛ اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
+              </p>
             </div>
 
-            {/* Content (right in RTL) */}
-            <div className="order-1 lg:col-span-7 text-right">
-              <div className="text-xs font-semibold text-muted-foreground mb-3">
-                بخش ۲ | مسئله
-              </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-[1.2]">
-                مشکل، کمبود ملک نیست؛
-                <br />
-                <span className="text-foreground">انتخاب اشتباه است</span>
-              </h2>
-              <p className="mt-4 text-sm md:text-base font-semibold text-muted-foreground">
-                بازتعریف روان‌شناسی تصمیم
-              </p>
-              <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
+            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8">
+              در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.
+              هر پروژه‌ای که جذاب به نظر می‌رسد، الزاماً برای بودجه، هدف یا زمان‌بندی شما مناسب نیست.
+            </p>
 
-              <div className="mt-7 relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft via-background to-surface p-6 md:p-7 text-center shadow-soft">
-                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-l from-transparent via-primary/30 to-transparent" />
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background text-primary shadow-soft ring-1 ring-primary/15">
-                  <Target className="w-6 h-6" />
+            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {risks.map(({ icon: Icon, label }) => (
+                <div key={label} className="card-soft p-4 text-center">
+                  <Icon className="w-7 h-7 text-primary mx-auto mb-2" />
+                  <div className="text-sm font-bold text-foreground leading-6">{label}</div>
                 </div>
-                <p className="mx-auto max-w-3xl text-base md:text-xl font-extrabold text-primary leading-9">
-                  در دبی پروژه زیاد است؛ اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
-                </p>
-              </div>
+              ))}
+            </div>
 
-              <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8">
-                در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.
-                هر پروژه‌ای که جذاب به نظر می‌رسد، الزاماً برای بودجه، هدف یا زمان‌بندی شما مناسب نیست.
-              </p>
-
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {risks.map(({ icon: Icon, label }) => (
-                  <div key={label} className="card-soft p-4 text-center">
-                    <Icon className="w-7 h-7 text-primary mx-auto mb-2" />
-                    <div className="text-sm font-bold text-foreground leading-6">{label}</div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-7 flex flex-wrap items-center gap-4">
-                <a href="#qualify" className="btn-primary">
-                  <Filter className="w-5 h-5" />
-                  قبل از خرید، شرایط خودتان را بررسی کنید
-                </a>
-                <p className="text-xs text-muted-foreground">یک پروژه خوب برای همه مناسب نیست.</p>
-              </div>
+            <div className="mt-7 flex flex-wrap items-center gap-4">
+              <a href="#qualify" className="btn-primary">
+                <Filter className="w-5 h-5" />
+                قبل از خرید، شرایط خودتان را بررسی کنید
+              </a>
+              <p className="text-xs text-muted-foreground">یک پروژه خوب برای همه مناسب نیست.</p>
             </div>
           </div>
         </div>

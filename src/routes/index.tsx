@@ -185,7 +185,7 @@ function ProblemSection() {
           />
           {/* Overlay for readability */}
           <div className="absolute inset-0 bg-background/20" />
-          <div className="absolute inset-0 bg-gradient-to-l from-white/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-l from-white/85 via-white/55 to-white/25 md:from-white/40 md:via-transparent md:to-transparent" />
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
             <div className="text-xs font-semibold text-muted-foreground mb-3">
@@ -207,7 +207,7 @@ function ProblemSection() {
               اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
             </p>
 
-            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8 max-w-[20rem] sm:max-w-md">
+            <p className="mt-6 text-sm md:text-base text-foreground/90 md:text-muted-foreground leading-8 max-w-[20rem] sm:max-w-md">
               در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.
               هر پروژه‌ای که جذاب به نظر می‌رسد، الزاماً برای بودجه، هدف یا زمان‌بندی شما مناسب نیست.
             </p>

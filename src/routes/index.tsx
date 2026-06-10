@@ -376,12 +376,12 @@ function AudienceFitSection() {
 /* ---------------- 5. DATA PROOF ---------------- */
 function DataProofSection() {
   const metrics = [
-    { label: "مبلغ اولیه", value: "از ٪۱۰", caption: "بسته به سازنده و پروژه" },
-    { label: "برنامه پرداخت", value: "تا ۶ سال", caption: "اقساط بلندمدت برای برخی پروژه‌ها" },
-    { label: "زمان تحویل", value: "۱ تا ۴ سال", caption: "وابسته به مرحله ساخت" },
-    { label: "تقاضای اجاره منطقه", value: "متفاوت", caption: "بسته به محله و نوع واحد" },
-    { label: "سابقه سازنده", value: "بررسی فردی", caption: "اعتبار، تعهد و کیفیت اجرا" },
-    { label: "بازده احتمالی اجاره", value: "۶٪ تا ۱۰٪", caption: "برآورد تقریبی، نه تضمینی" },
+    { icon: Wallet, label: "مبلغ اولیه", value: "از ٪۱۰", caption: "بسته به سازنده و پروژه" },
+    { icon: CalendarRange, label: "برنامه پرداخت", value: "تا ۶ سال", caption: "اقساط بلندمدت برای برخی پروژه‌ها" },
+    { icon: Clock, label: "زمان تحویل", value: "۱ تا ۴ سال", caption: "وابسته به مرحله ساخت" },
+    { icon: MapPin, label: "تقاضای اجاره منطقه", value: "متفاوت", caption: "بسته به محله و نوع واحد" },
+    { icon: Building, label: "سابقه سازنده", value: "بررسی فردی", caption: "اعتبار، تعهد و کیفیت اجرا" },
+    { icon: TrendingUp, label: "بازده احتمالی اجاره", value: "۶٪ تا ۱۰٪", caption: "برآورد تقریبی، نه تضمینی" },
   ];
   return (
     <section className="mt-24 md:mt-32">
@@ -394,10 +394,25 @@ function DataProofSection() {
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
           {metrics.map((m) => (
-            <div key={m.label} className="card-soft p-6">
-              <div className="text-xs font-semibold text-muted-foreground">{m.label}</div>
-              <div className="mt-2 text-3xl md:text-4xl font-extrabold text-primary">{m.value}</div>
-              <div className="mt-2 text-sm text-muted-foreground leading-6">{m.caption}</div>
+            <div
+              key={m.label}
+              className="group card-soft relative overflow-hidden p-6 bg-gradient-to-bl from-surface to-card"
+            >
+              <m.icon
+                className="pointer-events-none absolute -left-4 -bottom-4 w-28 h-28 text-primary/[0.05] transition-transform duration-300 group-hover:scale-110"
+                aria-hidden="true"
+              />
+              <div className="relative">
+                <div className="flex items-center gap-2.5">
+                  <span className="inline-flex w-9 h-9 items-center justify-center rounded-lg bg-primary-soft text-primary">
+                    <m.icon className="w-4.5 h-4.5" />
+                  </span>
+                  <span className="text-xs font-semibold text-muted-foreground">{m.label}</span>
+                </div>
+                <div className="mt-4 text-3xl md:text-4xl font-extrabold text-primary">{m.value}</div>
+                <div className="mt-3 h-1 w-10 rounded-full bg-accent transition-all duration-300 group-hover:w-16" />
+                <div className="mt-3 text-sm text-muted-foreground leading-6">{m.caption}</div>
+              </div>
             </div>
           ))}
         </div>

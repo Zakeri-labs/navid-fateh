@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ShieldCheck, Users, TrendingUp, CalendarRange, ChevronLeft, MessageCircle,
   MapPin, Building, LineChart, Calculator, Target, Wallet, CreditCard,
-  Compass, Hammer, CheckCircle2, BarChart3, Clock, Award, Instagram,
+  Compass, CheckCircle2, BarChart3, Clock, Award, Instagram,
   Send, Filter, FileSearch, Phone, Quote,
 } from "lucide-react";
 import { Header } from "@/components/site/Header";
@@ -231,13 +231,13 @@ function ProblemSection() {
 
 /* ---------------- 3. APPROACH ---------------- */
 function ApproachSection() {
-  const steps = [
-    { icon: Target, title: "هدف خرید", body: "سرمایه‌گذاری، اقامت، درآمد اجاره یا زندگی." },
-    { icon: Wallet, title: "بودجه", body: "مبلغ اولیه، توان پرداخت و بازه تصمیم‌گیری." },
-    { icon: CreditCard, title: "روش پرداخت", body: "خرید نقدی یا اقساطی." },
-    { icon: Compass, title: "منطقه", body: "تقاضای اجاره، دسترسی، نوع پروژه و ظرفیت رشد." },
-    { icon: Hammer, title: "سازنده و پروژه", body: "سابقه، زمان تحویل، شرایط قرارداد و کیفیت اجرا." },
-    { icon: CheckCircle2, title: "انتخاب نهایی", body: "مقایسه گزینه‌های متناسب." },
+  const factors = [
+    { icon: Target, n: "۱", title: "هدف خرید", body: "اقامت / سرمایه‌گذاری", x: 72, y: 14 },
+    { icon: Wallet, n: "۲", title: "بودجه", body: "آورده / اقساط", x: 88, y: 50 },
+    { icon: CreditCard, n: "۳", title: "روش پرداخت", body: "نقدی / مرحله‌ای", x: 72, y: 86 },
+    { icon: MapPin, n: "۴", title: "منطقه", body: "رشد / دسترسی", x: 28, y: 86 },
+    { icon: Building, n: "۵", title: "سازنده", body: "سابقه / کیفیت", x: 12, y: 50 },
+    { icon: CheckCircle2, n: "۶", title: "انتخاب نهایی", body: "مقایسه / تصمیم", x: 28, y: 14 },
   ];
   return (
     <section className="mt-24 md:mt-32">
@@ -248,17 +248,71 @@ function ApproachSection() {
           subtitle="هر گزینه زمانی ارزش بررسی دارد که با هدف، بودجه و مدل خرید شما هماهنگ باشد."
         />
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-          {steps.map((s, i) => (
-            <div key={s.title} className="card-soft p-6 relative">
-              <div className="flex items-center justify-between mb-4">
-                <div className="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                  <s.icon className="w-5 h-5" />
-                </div>
-                <span className="text-3xl font-black text-primary/15">{String(i + 1).padStart(2, "0")}</span>
+        {/* Desktop: radial compass */}
+        <div className="hidden lg:block relative mx-auto mt-12 aspect-[16/9] max-w-4xl">
+          <svg
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+            className="absolute inset-0 w-full h-full"
+            aria-hidden="true"
+          >
+            {factors.map((f) => (
+              <line
+                key={f.title}
+                x1="50"
+                y1="50"
+                x2={f.x}
+                y2={f.y}
+                stroke="var(--color-primary)"
+                strokeWidth="1"
+                strokeOpacity="0.18"
+                strokeDasharray="2 2"
+                vectorEffect="non-scaling-stroke"
+              />
+            ))}
+          </svg>
+
+          {/* Center */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+            <div className="relative w-52 h-52 rounded-full bg-primary text-primary-foreground shadow-card flex items-center justify-center">
+              <div className="absolute inset-3 rounded-full border border-dashed border-white/25" />
+              <div className="text-center px-6">
+                <Compass className="w-7 h-7 mx-auto mb-2 opacity-90" />
+                <div className="text-xl font-extrabold leading-7">ملک<br />مناسب شما</div>
               </div>
-              <h3 className="text-lg font-extrabold text-foreground">{s.title}</h3>
-              <p className="mt-1.5 text-sm text-muted-foreground leading-7">{s.body}</p>
+            </div>
+          </div>
+
+          {/* Nodes */}
+          {factors.map((f) => (
+            <div
+              key={f.title}
+              className="absolute -translate-x-1/2 -translate-y-1/2 z-20"
+              style={{ top: `${f.y}%`, left: `${f.x}%` }}
+            >
+              <div className="w-36 h-36 rounded-full bg-card border border-border shadow-soft flex flex-col items-center justify-center text-center px-4 transition-transform hover:-translate-y-1">
+                <div className="inline-flex w-10 h-10 items-center justify-center rounded-full bg-primary-soft text-primary mb-1.5">
+                  <f.icon className="w-5 h-5" />
+                </div>
+                <h3 className="text-sm font-extrabold text-foreground">{f.title}</h3>
+                <p className="mt-0.5 text-xs text-muted-foreground leading-5">{f.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile / tablet: grid */}
+        <div className="lg:hidden mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {factors.map((f) => (
+            <div key={f.title} className="card-soft p-5 flex items-center gap-4">
+              <div className="inline-flex w-12 h-12 shrink-0 items-center justify-center rounded-xl bg-primary-soft text-primary">
+                <f.icon className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-base font-extrabold text-foreground">{f.title}</h3>
+                <p className="mt-0.5 text-sm text-muted-foreground leading-6">{f.body}</p>
+              </div>
+              <span className="ms-auto text-2xl font-black text-primary/15">{f.n}</span>
             </div>
           ))}
         </div>

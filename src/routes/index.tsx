@@ -12,6 +12,11 @@ import { QualifyForm } from "@/components/site/QualifyForm";
 import heroAdvisor from "@/assets/hero-advisor.jpg";
 import problemSectionBg from "@/assets/Problem image.png";
 import dubaiSkyline from "@/assets/dubai-skyline.jpg";
+import fitInvestment from "@/assets/1-investment.png";
+import fitResidence from "@/assets/2-residence.png";
+import fitBuy from "@/assets/3-buy.png";
+import fitIncome from "@/assets/4-income.png";
+import fitLife from "@/assets/5-life.png";
 
 const WHATSAPP_URL = "https://wa.me/971507657477";
 
@@ -317,13 +322,6 @@ function ApproachSection() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-primary text-primary-foreground">
-          <p className="font-bold text-base md:text-lg">مرحله اول، معرفی پروژه نیست؛ شناخت شرایط شماست.</p>
-          <a href="#qualify" className="btn-primary !bg-accent">
-            بررسی شرایط خرید من
-            <ChevronLeft className="w-4 h-4" />
-          </a>
-        </div>
       </div>
     </section>
   );
@@ -332,11 +330,11 @@ function ApproachSection() {
 /* ---------------- 4. AUDIENCE FIT ---------------- */
 function AudienceFitSection() {
   const goals = [
-    { title: "برای سرمایه‌گذاری", body: "رشد سرمایه با ارزیابی منطقه و سازنده.", icon: TrendingUp },
-    { title: "برای اقامت", body: "بررسی شرایط ملکی مرتبط با اقامت.", icon: ShieldCheck },
-    { title: "برای خرید اقساطی", body: "مقایسه برنامه‌های پرداخت و زمان تحویل.", icon: CreditCard },
-    { title: "برای درآمد اجاره", body: "مناطقی با تقاضای اجاره و بازده مناسب.", icon: BarChart3 },
-    { title: "برای زندگی در دبی", body: "انتخاب محله، مدارس و سبک زندگی.", icon: Compass },
+    { title: "برای سرمایه‌گذاری", body: "رشد سرمایه با ارزیابی منطقه و سازنده.", img: fitInvestment },
+    { title: "برای اقامت", body: "بررسی شرایط ملکی مرتبط با اقامت.", img: fitResidence },
+    { title: "برای خرید اقساطی", body: "مقایسه برنامه‌های پرداخت و زمان تحویل.", img: fitBuy },
+    { title: "برای درآمد اجاره", body: "مناطقی با تقاضای اجاره و بازده مناسب.", img: fitIncome },
+    { title: "برای زندگی در دبی", body: "انتخاب محله، مدارس و سبک زندگی.", img: fitLife },
   ];
   return (
     <section className="mt-24 md:mt-32">
@@ -350,12 +348,14 @@ function AudienceFitSection() {
         <div className="mt-10 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto md:overflow-visible">
           <div className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 min-w-max md:min-w-0">
             {goals.map((g) => (
-              <div key={g.title} className="card-soft p-5 w-64 md:w-auto shrink-0">
-                <div className="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-primary-soft text-primary mb-3">
-                  <g.icon className="w-5 h-5" />
+              <div key={g.title} className="card-soft overflow-hidden w-64 md:w-auto shrink-0">
+                <div className="aspect-[4/3] w-full bg-surface">
+                  <img src={g.img} alt={g.title} className="w-full h-full object-contain" />
                 </div>
-                <h3 className="font-extrabold text-foreground">{g.title}</h3>
-                <p className="mt-1.5 text-sm text-muted-foreground leading-6">{g.body}</p>
+                <div className="p-5">
+                  <h3 className="font-extrabold text-foreground">{g.title}</h3>
+                  <p className="mt-1.5 text-sm text-muted-foreground leading-6">{g.body}</p>
+                </div>
               </div>
             ))}
           </div>

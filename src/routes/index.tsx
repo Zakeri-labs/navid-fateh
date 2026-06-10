@@ -173,7 +173,7 @@ function ProblemSection() {
 
           <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Image side (left in RTL) */}
-            <div className="order-2 lg:order-1 lg:col-span-5 relative">
+            <div className="order-2 lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-surface-muted">
                 <img
                   src={problemAdvisor}
@@ -188,7 +188,7 @@ function ProblemSection() {
             </div>
 
             {/* Content (right in RTL) */}
-            <div className="order-1 lg:order-2 lg:col-span-7 text-right">
+            <div className="order-1 lg:col-span-7 text-right">
               <div className="text-xs font-semibold text-muted-foreground mb-3">
                 بخش ۲ | مسئله
               </div>
@@ -202,9 +202,12 @@ function ProblemSection() {
               </p>
               <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
 
-              <div className="mt-7 flex gap-4 p-5 rounded-2xl bg-primary-soft border border-primary/15">
-                <Target className="w-6 h-6 text-primary shrink-0 mt-1" />
-                <p className="text-base md:text-lg font-bold text-primary leading-8">
+              <div className="mt-7 relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft via-background to-surface p-6 md:p-7 text-center shadow-soft">
+                <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-l from-transparent via-primary/30 to-transparent" />
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background text-primary shadow-soft ring-1 ring-primary/15">
+                  <Target className="w-6 h-6" />
+                </div>
+                <p className="mx-auto max-w-3xl text-base md:text-xl font-extrabold text-primary leading-9">
                   در دبی پروژه زیاد است؛ اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
                 </p>
               </div>

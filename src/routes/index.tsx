@@ -189,7 +189,7 @@ function ProblemSection() {
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
             <div className="text-xs font-semibold text-muted-foreground mb-3">
-              بخش ۲ | مسئله
+              مسئله
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-[1.2]">
               مشکل، کمبود ملک نیست؛

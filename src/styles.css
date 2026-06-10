@@ -32,8 +32,8 @@
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
 
-  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Parastoo", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Parastoo", ui-sans-serif, system-ui, sans-serif;
 
   --shadow-card: 0 4px 24px -8px color-mix(in oklab, var(--primary) 18%, transparent);
   --shadow-soft: 0 2px 12px -4px color-mix(in oklab, var(--primary) 10%, transparent);

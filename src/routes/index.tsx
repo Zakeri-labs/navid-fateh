@@ -178,7 +178,7 @@ function ProblemSection() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-background/85" />
+          <div className="absolute inset-0 bg-background/20" />
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
             <div className="text-xs font-semibold text-muted-foreground mb-3">
@@ -194,15 +194,11 @@ function ProblemSection() {
             </p>
             <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
 
-            <div className="mt-7 relative overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-soft via-background to-surface p-6 md:p-7 text-center shadow-soft">
-              <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-l from-transparent via-primary/30 to-transparent" />
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-background text-primary shadow-soft ring-1 ring-primary/15">
-                <Target className="w-6 h-6" />
-              </div>
-              <p className="mx-auto max-w-3xl text-base md:text-xl font-extrabold text-primary leading-9">
-                در دبی پروژه زیاد است؛ اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
-              </p>
-            </div>
+            <p className="mt-7 text-xl md:text-2xl font-extrabold leading-9 bg-gradient-to-l from-primary to-accent bg-clip-text text-transparent">
+              در دبی پروژه زیاد است؛
+              <br />
+              اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
+            </p>
 
             <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8">
               در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.

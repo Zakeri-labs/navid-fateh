@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, MessageCircle, Building2 } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const WHATSAPP_URL = "https://wa.me/971507657477";
 
@@ -32,9 +33,7 @@ export function Header() {
       >
         <div className="container-page flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-soft">
-              <Building2 className="w-5 h-5" />
-            </span>
+            <img src={logo} alt="نوید فاتح" className="h-10 w-10 object-contain" />
             <span className="flex flex-col leading-tight">
               <span className={`font-extrabold text-base md:text-lg ${scrolled ? "text-foreground" : "text-foreground"}`}>
                 نوید فاتح
@@ -86,9 +85,7 @@ export function Header() {
           <div className="absolute top-0 inset-x-0 bg-background border-b border-border shadow-card p-5 animate-fade-up">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2.5">
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-                  <Building2 className="w-5 h-5" />
-                </span>
+                <img src={logo} alt="نوید فاتح" className="h-10 w-10 object-contain" />
                 <div className="leading-tight">
                   <div className="font-extrabold">نوید فاتح</div>
                   <div className="text-[11px] text-muted-foreground">مشاوره ملک در دبی</div>

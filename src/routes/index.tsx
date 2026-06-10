@@ -12,6 +12,7 @@ import { QualifyForm } from "@/components/site/QualifyForm";
 import heroAdvisor from "@/assets/hero-advisor.jpg";
 import problemSectionBg from "@/assets/Problem image.png";
 import dubaiSkyline from "@/assets/dubai-skyline.jpg";
+import navidPortrait from "@/assets/navid1.png";
 import fitInvestment from "@/assets/1-investment.png";
 import fitResidence from "@/assets/2-residence.png";
 import fitBuy from "@/assets/3-buy.png";
@@ -486,7 +487,7 @@ function PersonalTrustSection() {
             <div className="lg:col-span-4 flex justify-center">
               <div className="relative">
                 <img
-                  src={heroAdvisor}
+                  src={navidPortrait}
                   alt="نوید فاتح، مشاور ملک در دبی"
                   loading="lazy"
                   width={400}

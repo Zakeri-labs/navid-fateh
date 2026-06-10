@@ -77,38 +77,36 @@ function HomePage() {
 /* ---------------- 1. HERO ---------------- */
 function Hero() {
   return (
-    <section className="relative pt-24 md:pt-28">
-      <div className="container-page relative">
-        <div className="relative rounded-3xl overflow-hidden border border-border shadow-card bg-primary">
-          {/* Background image */}
+    <section className="relative overflow-hidden bg-background pt-24 md:pt-28">
+      <div className="relative min-h-[760px] md:min-h-screen">
+        <div className="absolute inset-0 overflow-hidden">
           <img
             src={heroAdvisor}
             alt="نوید فاتح، مشاور فارسی‌زبان خرید ملک در دبی، مقابل افق دبی"
-            width={1280}
-            height={1280}
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            width={1664}
+            height={945}
+            className="h-full w-full object-cover object-[28%_center] opacity-35 md:object-center md:opacity-100"
           />
-          {/* Gradient overlay (RTL: stronger on right side where text sits) */}
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-primary/30 to-primary/85 md:to-primary/90" />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent" />
+        </div>
 
-          <div className="relative grid md:grid-cols-12 gap-6 p-6 sm:p-10 md:p-14 lg:p-16 min-h-[560px] md:min-h-[640px]">
-            <div className="md:col-span-7 lg:col-span-6 flex flex-col justify-center text-right animate-fade-up">
-              <div className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-white/90 bg-white/10 backdrop-blur w-fit px-3 py-1.5 rounded-full border border-white/15">
+        <div className="container-page relative z-10">
+          <div className="flex min-h-[600px] flex-col justify-center py-8 md:min-h-[calc(100vh-160px)] md:flex-row md:items-center md:gap-10 md:py-16 lg:gap-16">
+            <div className="w-full md:w-[48%] lg:w-[46%] text-right animate-fade-up">
+              <div className="inline-flex items-center gap-2 text-sm md:text-base font-bold text-primary w-fit px-0 py-1.5">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 مشاوره خرید ملک در دبی برای فارسی‌زبانان
               </div>
 
-              <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15]">
+              <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-primary leading-[1.15]">
                 برای خرید ملک در دبی،
                 <br />
-                <span className="text-white">اول مطمئن تصمیم بگیرید</span>
+                <span>اول مطمئن تصمیم بگیرید</span>
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-white/85 leading-8 max-w-xl">
+              <p className="mt-5 text-base md:text-lg text-foreground/80 leading-8 max-w-xl">
                 پروژه مناسب شما باید بر اساس بودجه، هدف خرید، شرایط پرداخت، اعتبار سازنده و موقعیت ملک انتخاب شود؛ نه صرفاً بر اساس تبلیغات.
               </p>
-              <p className="mt-3 text-sm md:text-base text-white/75 leading-8 max-w-xl">
+              <p className="mt-3 text-sm md:text-base text-foreground/70 leading-8 max-w-xl">
                 خرید نقدی یا اقساطی، سرمایه‌گذاری، اقامت یا انتخاب ملک مناسب برای زندگی؛ مسیر از یک بررسی شفاف و هدفمند شروع می‌شود.
               </p>
 
@@ -118,35 +116,38 @@ function Hero() {
                   شروع مشاوره در واتساپ
                   <ChevronLeft className="w-4 h-4" />
                 </a>
-                <a href="#qualify" className="btn-outline bg-white/95 backdrop-blur border-white text-primary hover:!bg-white">
+                <a href="#qualify" className="btn-outline bg-background/80 backdrop-blur">
                   بررسی گزینه مناسب بودجه من
                   <ChevronLeft className="w-4 h-4" />
                 </a>
               </div>
 
-              <p className="mt-4 text-xs md:text-sm text-white/70 leading-7">
+              <p className="mt-4 text-xs md:text-sm text-muted-foreground leading-7">
                 برای شروع، فقط هدف خرید، حدود بودجه و روش پرداخت را مشخص کنید.
               </p>
             </div>
+
+            <div className="hidden md:block md:flex-1" aria-hidden="true" />
           </div>
         </div>
 
-        {/* Trust cards */}
-        <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-          {[
-            { icon: ShieldCheck, title: "مشاور Verified", body: "پیج تأییدشده و اطلاعات واقعی پروژه‌ها." },
-            { icon: Users, title: "+۵۷K دنبال‌کننده", body: "اعتماد جامعه فارسی‌زبان به محتوای تخصصی." },
-            { icon: TrendingUp, title: "بازده اجاره تا ٪", body: "برآورد سود اجاره برای مقایسه فرصت‌ها." },
-            { icon: CalendarRange, title: "اقساط تا ۶ سال", body: "بررسی شرایط پرداخت پروژه‌ها." },
-          ].map(({ icon: Icon, title, body }) => (
-            <div key={title} className="card-soft p-4 md:p-5 text-right">
-              <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary-soft text-primary mb-3">
-                <Icon className="w-5 h-5" />
+        <div className="container-page relative z-20 -mt-8 md:-mt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+            {[
+              { icon: ShieldCheck, title: "مشاور Verified", body: "پیج تأییدشده و اطلاعات واقعی پروژه‌ها." },
+              { icon: Users, title: "+۵۷K دنبال‌کننده", body: "اعتماد جامعه فارسی‌زبان به محتوای تخصصی." },
+              { icon: TrendingUp, title: "بازده اجاره تا ٪", body: "برآورد سود اجاره برای مقایسه فرصت‌ها." },
+              { icon: CalendarRange, title: "اقساط تا ۶ سال", body: "بررسی شرایط پرداخت پروژه‌ها." },
+            ].map(({ icon: Icon, title, body }) => (
+              <div key={title} className="card-soft p-5 md:p-7 text-center">
+                <div className="mx-auto flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary-soft text-primary mb-4">
+                  <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                </div>
+                <div className="text-base md:text-xl font-extrabold text-foreground">{title}</div>
+                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-7">{body}</p>
               </div>
-              <div className="text-sm md:text-base font-extrabold text-foreground">{title}</div>
-              <p className="mt-1.5 text-xs md:text-sm text-muted-foreground leading-6">{body}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

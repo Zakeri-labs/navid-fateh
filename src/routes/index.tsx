@@ -79,7 +79,7 @@ function Hero() {
   return (
     <section className="relative overflow-hidden bg-background pt-24 md:pt-28">
       <div className="relative min-h-[760px] md:min-h-screen">
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-[700px] overflow-hidden md:h-[calc(100vh-9rem)]">
           <img
             src={heroAdvisor}
             alt="نوید فاتح، مشاور فارسی‌زبان خرید ملک در دبی، مقابل افق دبی"
@@ -131,20 +131,23 @@ function Hero() {
           </div>
         </div>
 
-        <div className="container-page relative z-20 -mt-8 md:-mt-16">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5">
+        <div className="container-page relative z-20 -mt-10 md:-mt-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4">
             {[
               { icon: ShieldCheck, title: "مشاور Verified", body: "پیج تأییدشده و اطلاعات واقعی پروژه‌ها." },
               { icon: Users, title: "+۵۷K دنبال‌کننده", body: "اعتماد جامعه فارسی‌زبان به محتوای تخصصی." },
               { icon: TrendingUp, title: "بازده اجاره تا ٪", body: "برآورد سود اجاره برای مقایسه فرصت‌ها." },
               { icon: CalendarRange, title: "اقساط تا ۶ سال", body: "بررسی شرایط پرداخت پروژه‌ها." },
             ].map(({ icon: Icon, title, body }) => (
-              <div key={title} className="card-soft p-5 md:p-7 text-center">
-                <div className="mx-auto flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary-soft text-primary mb-4">
-                  <Icon className="w-6 h-6 md:w-7 md:h-7" />
+              <div
+                key={title}
+                className="rounded-2xl border border-white/45 bg-white/55 p-3.5 text-center shadow-[0_14px_36px_-24px_color-mix(in_oklab,var(--primary)_45%,transparent)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1 md:p-4"
+              >
+                <div className="mx-auto mb-2.5 flex h-9 w-9 items-center justify-center rounded-xl bg-primary-soft/80 text-primary ring-1 ring-white/50 backdrop-blur md:h-10 md:w-10">
+                  <Icon className="w-4.5 h-4.5 md:w-5 md:h-5" />
                 </div>
-                <div className="text-base md:text-xl font-extrabold text-foreground">{title}</div>
-                <p className="mt-2 text-xs md:text-sm text-muted-foreground leading-7">{body}</p>
+                <div className="text-sm md:text-base font-extrabold text-foreground">{title}</div>
+                <p className="mt-1 text-[11px] md:text-xs text-muted-foreground leading-5">{body}</p>
               </div>
             ))}
           </div>

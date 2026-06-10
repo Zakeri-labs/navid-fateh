@@ -109,11 +109,11 @@ function Hero() {
                 <span>اول مطمئن تصمیم بگیرید</span>
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-foreground/80 leading-8 max-w-xl">
+              <p className="mt-5 text-base md:text-lg text-foreground/80 leading-8 max-w-[20rem] sm:max-w-xl">
                 پروژه مناسب شما باید بر اساس بودجه، هدف خرید، شرایط پرداخت، اعتبار سازنده و موقعیت ملک انتخاب شود؛ نه صرفاً بر اساس تبلیغات.
               </p>
-              <p className="mt-3 text-sm md:text-base text-foreground/70 leading-8 max-w-xl">
-                خرید نقدی یا اقساطی، سرمایه‌گذاری، اقامت یا انتخاب ملک مناسب برای زندگی؛ مسیر از یک بررسی شفاف و هدفمند شروع می‌شود.
+              <p className="mt-3 text-sm md:text-base font-extrabold leading-8 max-w-[18rem] sm:max-w-xl bg-gradient-to-l from-primary via-accent to-primary bg-clip-text text-transparent">
+                مسیر از یک بررسی شفاف و هدفمند شروع می‌شود
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
@@ -128,7 +128,7 @@ function Hero() {
                 </a>
               </div>
 
-              <p className="mt-4 text-xs md:text-sm text-muted-foreground leading-7">
+              <p className="mt-4 text-xs md:text-sm text-muted-foreground leading-7 max-w-[20rem] sm:max-w-none">
                 برای شروع، فقط هدف خرید، حدود بودجه و روش پرداخت را مشخص کنید.
               </p>
             </div>
@@ -147,9 +147,9 @@ function Hero() {
             ].map(({ icon: Icon, title, body }) => (
               <div
                 key={title}
-                className="rounded-2xl border border-white/45 bg-white/55 p-3.5 text-center shadow-[0_14px_36px_-24px_color-mix(in_oklab,var(--primary)_45%,transparent)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1 md:p-4"
+                className="rounded-2xl border border-white/40 bg-white/30 p-2 text-center shadow-[0_14px_36px_-24px_color-mix(in_oklab,var(--primary)_45%,transparent)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1 md:p-4"
               >
-                <div className="mx-auto mb-2.5 flex h-9 w-9 items-center justify-center rounded-xl bg-primary-soft/80 text-primary ring-1 ring-white/50 backdrop-blur md:h-10 md:w-10">
+                <div className="mx-auto mb-1.5 flex h-8 w-8 items-center justify-center rounded-xl bg-primary-soft/80 text-primary ring-1 ring-white/50 backdrop-blur md:mb-2.5 md:h-10 md:w-10">
                   <Icon className="w-4.5 h-4.5 md:w-5 md:h-5" />
                 </div>
                 <div className="text-sm md:text-base font-extrabold text-foreground">{title}</div>
@@ -201,21 +201,24 @@ function ProblemSection() {
             </p>
             <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
 
-            <p className="mt-7 text-xl md:text-2xl font-extrabold leading-9 bg-gradient-to-l from-accent via-accent to-primary bg-clip-text text-transparent">
+            <p className="mt-7 text-xl md:text-2xl font-extrabold leading-9 bg-gradient-to-l from-primary via-accent to-primary bg-clip-text text-transparent">
               در دبی پروژه زیاد است؛
               <br />
               اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
             </p>
 
-            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8">
+            <p className="mt-6 text-sm md:text-base text-muted-foreground leading-8 max-w-[20rem] sm:max-w-md">
               در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.
               هر پروژه‌ای که جذاب به نظر می‌رسد، الزاماً برای بودجه، هدف یا زمان‌بندی شما مناسب نیست.
             </p>
 
             <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
               {risks.map(({ icon: Icon, label }) => (
-                <div key={label} className="card-soft p-4 text-center">
-                  <Icon className="w-7 h-7 text-primary mx-auto mb-2" />
+                <div
+                  key={label}
+                  className="rounded-2xl border border-white/40 bg-white/30 p-2.5 text-center shadow-[0_14px_36px_-24px_color-mix(in_oklab,var(--primary)_45%,transparent)] backdrop-blur-xl transition-transform duration-200 hover:-translate-y-1"
+                >
+                  <Icon className="w-6 h-6 text-primary mx-auto mb-1.5" />
                   <div className="text-sm font-bold text-foreground leading-6">{label}</div>
                 </div>
               ))}

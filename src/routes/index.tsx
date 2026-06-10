@@ -522,15 +522,15 @@ function PersonalTrustSection() {
               <p className="mt-4 text-white/85 leading-8 max-w-2xl">
                 نوید فاتح در دبی فعالیت می‌کند و از طریق Albandar Real Estate به فارسی‌زبانان برای بررسی گزینه‌های خرید ملک کمک می‌کند.
               </p>
-              <div className="mt-6 grid sm:grid-cols-2 gap-3">
+              <div className="mt-6 flex flex-col gap-3">
                 {[
                   { icon: MapPin, text: "حضور فعال در بازار دبی" },
                   { icon: MessageCircle, text: "ارتباط مستقیم از طریق واتساپ" },
                   { icon: ShieldCheck, text: "پیج تأییدشده نوید فاتح" },
                   { icon: Users, text: "بیش از ۵۷K دنبال‌کننده" },
                 ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-3 p-3 rounded-xl bg-white/10 border border-white/10">
-                    <Icon className="w-5 h-5 text-white" />
+                  <div key={text} className="flex items-center gap-3">
+                    <Icon className="w-5 h-5 text-white shrink-0" />
                     <span className="text-sm font-semibold">{text}</span>
                   </div>
                 ))}

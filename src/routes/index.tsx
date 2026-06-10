@@ -77,7 +77,7 @@ function HomePage() {
 /* ---------------- 1. HERO ---------------- */
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-24 md:pt-28">
+    <section className="relative overflow-hidden bg-background">
       <div className="relative min-h-[760px] md:min-h-screen">
         <div className="absolute inset-x-0 top-0 h-[700px] overflow-hidden md:h-[calc(100vh-9rem)]">
           <img
@@ -178,7 +178,7 @@ function ProblemSection() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Overlay for readability */}
-          <div className="absolute inset-0 bg-background/20" />
+          <div className="absolute inset-0 bg-background/30" />
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
             <div className="text-xs font-semibold text-muted-foreground mb-3">

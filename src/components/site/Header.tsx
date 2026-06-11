@@ -38,7 +38,7 @@ export function Header() {
               <span className={`font-extrabold text-base md:text-lg ${scrolled ? "text-foreground" : "text-foreground"}`}>
                 نوید فاتح
               </span>
-              <span className="text-[11px] md:text-xs text-muted-foreground">
+              <span className="text-xs md:text-sm text-muted-foreground">
                 مشاوره ملک در دبی
               </span>
             </span>
@@ -49,7 +49,7 @@ export function Header() {
               <Link
                 key={n.to}
                 to={n.to}
-                className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors"
+                className="text-base font-semibold text-foreground/80 hover:text-primary transition-colors"
                 activeProps={{ className: "text-primary" }}
               >
                 {n.label}
@@ -62,7 +62,7 @@ export function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:inline-flex btn-primary !py-2.5 !px-4 text-sm"
+              className="hidden md:inline-flex btn-primary !py-2.5 !px-4 text-base"
             >
               <MessageCircle className="w-4 h-4" />
               شروع مشاوره
@@ -88,7 +88,7 @@ export function Header() {
                 <img src={logo} alt="نوید فاتح" className="h-10 w-10 object-contain" />
                 <div className="leading-tight">
                   <div className="font-extrabold">نوید فاتح</div>
-                  <div className="text-[11px] text-muted-foreground">مشاوره ملک در دبی</div>
+                  <div className="text-xs text-muted-foreground">مشاوره ملک در دبی</div>
                 </div>
               </div>
               <button
@@ -105,7 +105,7 @@ export function Header() {
                   key={n.to}
                   to={n.to}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-3 text-base font-semibold text-foreground hover:bg-surface-muted"
+                  className="rounded-lg px-3 py-3.5 text-lg font-semibold text-foreground hover:bg-surface-muted"
                 >
                   {n.label}
                 </Link>

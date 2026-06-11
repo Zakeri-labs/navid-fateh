@@ -260,7 +260,7 @@ function ApproachSection() {
         {/* Desktop: radial compass */}
         <div className="hidden lg:block relative mx-auto mt-12 aspect-[16/9] max-w-4xl">
           <svg
-            viewBox="0 0 100 56.25"
+            viewBox="0 0 100 100"
             preserveAspectRatio="none"
             className="absolute inset-0 w-full h-full"
             aria-hidden="true"

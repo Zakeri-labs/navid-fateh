@@ -138,7 +138,7 @@ function Hero() {
         </div>
 
         <div className="container-page relative z-20 -mt-10 md:-mt-12">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4 max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
             {[
               { icon: ShieldCheck, title: "مشاور Verified", body: "پیج تأییدشده و اطلاعات واقعی پروژه‌ها." },
               { icon: Users, title: "+۵۷K دنبال‌کننده", body: "اعتماد جامعه فارسی‌زبان به محتوای تخصصی." },

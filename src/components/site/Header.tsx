@@ -31,20 +31,34 @@ export function Header() {
             : "bg-transparent"
         }`}
       >
-        <div className="container-page flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2.5 group">
-            <img src={logo} alt="نوید فاتح" className="h-10 w-10 object-contain" />
-            <span className="flex flex-col leading-tight">
-              <span className={`font-extrabold text-base md:text-lg ${scrolled ? "text-foreground" : "text-foreground"}`}>
-                نوید فاتح
-              </span>
-              <span className="text-xs md:text-sm text-muted-foreground">
-                مشاوره ملک در دبی
-              </span>
-            </span>
-          </Link>
+        <div className="container-page relative flex items-center h-16 md:h-20">
 
-          <nav className="hidden md:flex items-center gap-8">
+          {/* RTL: سمت راست — لوگو + دکمه CTA */}
+          <div className="flex items-center gap-3 shrink-0">
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <img src={logo} alt="نوید فاتح" className="h-10 w-10 object-contain" />
+              <span className="flex flex-col leading-tight">
+                <span className="font-extrabold text-base md:text-lg text-foreground">
+                  نوید فاتح
+                </span>
+                <span className="text-xs md:text-sm text-muted-foreground">
+                  مشاوره ملک در دبی
+                </span>
+              </span>
+            </Link>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden md:inline-flex btn-primary !py-2.5 !px-4 text-base"
+            >
+              <MessageCircle className="w-4 h-4" />
+              شروع مشاوره
+            </a>
+          </div>
+
+          {/* وسط واقعی — ناوبری با absolute centering */}
+          <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
             {NAV.map((n) => (
               <Link
                 key={n.to}
@@ -57,24 +71,15 @@ export function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex btn-primary !py-2.5 !px-4 text-base"
-            >
-              <MessageCircle className="w-4 h-4" />
-              شروع مشاوره
-            </a>
-            <button
-              onClick={() => setOpen(true)}
-              className="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg bg-background/90 border border-border text-foreground"
-              aria-label="باز کردن منو"
-            >
-              <Menu className="w-5 h-5" />
-            </button>
-          </div>
+          {/* موبایل — همبرگر سمت چپ */}
+          <button
+            onClick={() => setOpen(true)}
+            className="md:hidden ms-auto inline-flex items-center justify-center w-10 h-10 rounded-lg bg-background/90 border border-border text-foreground"
+            aria-label="باز کردن منو"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
+
         </div>
       </header>
 

@@ -13,7 +13,7 @@ type ChipsProps = { label: string; options: string[]; value: string | null; onCh
 function Chips({ label, options, value, onChange }: ChipsProps) {
   return (
     <div>
-      <div className="text-sm font-bold text-foreground mb-3">{label}</div>
+      <div className="text-base font-bold text-foreground mb-3">{label}</div>
       <div className="flex flex-wrap gap-2">
         {options.map((o) => {
           const active = value === o;
@@ -22,7 +22,7 @@ function Chips({ label, options, value, onChange }: ChipsProps) {
               key={o}
               type="button"
               onClick={() => onChange(o)}
-              className={`px-3.5 py-2 rounded-full text-sm font-semibold border transition-all ${
+              className={`px-3.5 py-2 rounded-full text-base font-semibold border transition-all ${
                 active
                   ? "bg-primary text-primary-foreground border-primary shadow-soft"
                   : "bg-card text-foreground/80 border-border hover:border-primary/40"
@@ -67,11 +67,11 @@ export function QualifyForm() {
       </div>
 
       <div className="lg:col-span-2 card-soft p-6 md:p-8 bg-surface flex flex-col">
-        <div className="text-sm font-bold text-primary mb-3">پیش‌نمایش پیام واتساپ</div>
-        <pre className="text-sm leading-7 whitespace-pre-wrap text-foreground/85 bg-card border border-border rounded-xl p-4 font-sans flex-1">
+        <div className="text-base font-bold text-primary mb-3">پیش‌نمایش پیام واتساپ</div>
+        <pre className="text-base leading-7 whitespace-pre-wrap text-foreground/85 bg-card border border-border rounded-xl p-4 font-sans flex-1">
 {message}
         </pre>
-        <p className="text-xs text-muted-foreground mt-3 leading-6">
+        <p className="text-sm text-muted-foreground mt-3 leading-6">
           پس از انتخاب گزینه‌ها، پیام آماده برای واتساپ ساخته می‌شود. قبل از ارسال می‌توانید آن را بررسی کنید.
         </p>
         <a
@@ -85,7 +85,7 @@ export function QualifyForm() {
           <MessageCircle className="w-5 h-5" />
           ارسال اطلاعات و شروع مشاوره
         </a>
-        <div className="mt-3 text-xs text-muted-foreground flex items-center gap-1.5">
+        <div className="mt-3 text-sm text-muted-foreground flex items-center gap-1.5">
           <Check className="w-3.5 h-3.5 text-[var(--color-whatsapp)]" />
           مرحله اول فقط برای شناخت شرایط و بررسی گزینه‌های مرتبط است.
         </div>

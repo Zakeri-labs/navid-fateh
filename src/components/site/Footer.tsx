@@ -23,7 +23,7 @@ export function Footer() {
               <div className="text-xs opacity-80">Albandar Real Estate · Dubai</div>
             </div>
           </div>
-          <p className="text-sm leading-7 opacity-85 max-w-md">
+          <p className="text-base leading-7 opacity-85 max-w-md">
             مشاوره فارسی‌زبان برای تصمیم مطمئن‌تر در خرید ملک دبی.
           </p>
           <a
@@ -39,7 +39,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-bold mb-4 opacity-90">پیوندها</h4>
-          <ul className="space-y-2 text-sm opacity-85">
+          <ul className="space-y-2 text-base opacity-85">
             <li><Link to="/" className="hover:opacity-100">خانه</Link></li>
             <li><Link to="/guide" className="hover:opacity-100">راهنما</Link></li>
             <li><Link to="/contact" className="hover:opacity-100">تماس با ما</Link></li>
@@ -48,7 +48,7 @@ export function Footer() {
 
         <div>
           <h4 className="text-sm font-bold mb-4 opacity-90">ارتباط</h4>
-          <ul className="space-y-2 text-sm opacity-85">
+          <ul className="space-y-2 text-base opacity-85">
             <li>
               <a href="https://instagram.com/navidfateh_realstate" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:opacity-100">
                 <Instagram className="w-4 h-4" /> @navidfateh_realstate
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-page py-5 flex flex-wrap items-center justify-between gap-3 text-xs opacity-70">
+        <div className="container-page py-5 flex flex-wrap items-center justify-between gap-3 text-sm opacity-70">
           <div className="flex items-center gap-2">
             <Building2 className="w-4 h-4" /> Albandar Real Estate
           </div>

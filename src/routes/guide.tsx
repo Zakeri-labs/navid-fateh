@@ -28,7 +28,7 @@ function GuidePage() {
           <h1 className="text-3xl md:text-5xl font-extrabold text-foreground leading-tight">
             راهنمای خرید ملک در دبی
           </h1>
-          <p className="mt-4 text-muted-foreground leading-8">
+          <p className="mt-4 text-base md:text-lg text-muted-foreground leading-8">
             مرور کوتاه اقامت، بودجه و اقساط برای تصمیم آگاهانه‌تر. این مطالب صرفاً جنبه راهنما دارند و جایگزین بررسی پروژه‌محور نیستند.
           </p>
 
@@ -37,13 +37,13 @@ function GuidePage() {
               <span className="inline-flex w-10 h-10 items-center justify-center rounded-xl bg-primary text-primary-foreground"><Home className="w-5 h-5" /></span>
               <h2 className="text-2xl font-extrabold">راهنمای اقامت از طریق خرید ملک</h2>
             </div>
-            <div className="mt-5 space-y-4 text-foreground/85 leading-8 text-sm md:text-base">
+            <div className="mt-5 space-y-4 text-foreground/85 leading-8 text-base md:text-lg">
               <p>در دبی برخی شرایط ملکی می‌تواند زمینه‌ساز اقامت کوتاه‌مدت یا بلندمدت باشد. شرایط بر اساس ارزش ملک، نوع پروژه و قوانین روز متفاوت است.</p>
               <p>قبل از تصمیم خرید با هدف اقامت، باید مدارک، حداقل ارزش ملک و وضعیت سند پروژه به‌صورت پروژه‌محور بررسی شود.</p>
             </div>
             <div className="mt-5 flex items-start gap-3 p-4 rounded-xl bg-surface border border-border">
               <ShieldCheck className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-              <p className="text-sm text-muted-foreground leading-7">
+              <p className="text-base text-muted-foreground leading-7">
                 خرید ملک به‌تنهایی به معنی اعطای قطعی اقامت نیست. شرایط و قوانین در زمان خرید باید بررسی شود.
               </p>
             </div>
@@ -106,7 +106,7 @@ function BudgetCalculator() {
         <Result label="قسط ماهانه تقریبی" value={`${fmt(monthly)} درهم`} primary />
       </div>
 
-      <p className="mt-4 text-xs text-muted-foreground leading-6">
+      <p className="mt-4 text-sm text-muted-foreground leading-6">
         این برآورد بدون احتساب کارمزد، مالیات، بیمه و شرایط خاص هر پروژه است و صرفاً جنبه تقریبی دارد.
       </p>
     </section>
@@ -116,7 +116,7 @@ function BudgetCalculator() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <div className="text-sm font-bold text-foreground mb-2">{label}</div>
+      <div className="text-base font-bold text-foreground mb-2">{label}</div>
       {children}
     </div>
   );
@@ -125,7 +125,7 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 function Result({ label, value, primary }: { label: string; value: string; primary?: boolean }) {
   return (
     <div className={`p-4 rounded-xl border ${primary ? "bg-primary text-primary-foreground border-primary" : "bg-surface border-border"}`}>
-      <div className={`text-xs ${primary ? "text-white/80" : "text-muted-foreground"}`}>{label}</div>
+      <div className={`text-sm ${primary ? "text-white/80" : "text-muted-foreground"}`}>{label}</div>
       <div className="mt-1 text-xl font-extrabold">{value}</div>
     </div>
   );

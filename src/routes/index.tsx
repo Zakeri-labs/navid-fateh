@@ -51,7 +51,7 @@ function SectionHeader({ eyebrow, title, subtitle, align = "start" }: {
       <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground leading-tight">
         {title}
       </h2>
-      {subtitle && <p className="mt-4 text-base md:text-lg text-muted-foreground leading-8">{subtitle}</p>}
+      {subtitle && <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-8">{subtitle}</p>}
     </div>
   );
 }
@@ -109,10 +109,10 @@ function Hero() {
                 <span>اول مطمئن تصمیم بگیرید</span>
               </h1>
 
-              <p className="mt-5 text-base md:text-lg text-foreground/80 leading-8 max-w-[20rem] sm:max-w-xl">
+              <p className="mt-5 text-lg md:text-xl text-foreground/80 leading-9 max-w-[20rem] sm:max-w-xl">
                 پروژه مناسب شما باید بر اساس بودجه، هدف خرید، شرایط پرداخت، اعتبار سازنده و موقعیت ملک انتخاب شود؛ نه صرفاً بر اساس تبلیغات.
               </p>
-              <p className="mt-3 text-sm md:text-base font-extrabold leading-8 max-w-[18rem] sm:max-w-xl bg-gradient-to-l from-primary via-accent to-primary bg-clip-text text-transparent">
+              <p className="mt-3 text-base md:text-lg font-extrabold leading-8 max-w-[18rem] sm:max-w-xl bg-gradient-to-l from-primary via-accent to-primary bg-clip-text text-transparent">
                 مسیر از یک بررسی شفاف و هدفمند شروع می‌شود
               </p>
 
@@ -128,7 +128,7 @@ function Hero() {
                 </a>
               </div>
 
-              <p className="mt-4 text-xs md:text-sm text-muted-foreground leading-7 max-w-[20rem] sm:max-w-none">
+              <p className="mt-4 text-sm md:text-base text-muted-foreground leading-7 max-w-[20rem] sm:max-w-none">
                 برای شروع، فقط هدف خرید، حدود بودجه و روش پرداخت را مشخص کنید.
               </p>
             </div>
@@ -142,7 +142,7 @@ function Hero() {
             {[
               { icon: ShieldCheck, title: "مشاور Verified", body: "پیج تأییدشده و اطلاعات واقعی پروژه‌ها." },
               { icon: Users, title: "+۵۷K دنبال‌کننده", body: "اعتماد جامعه فارسی‌زبان به محتوای تخصصی." },
-              { icon: TrendingUp, title: "بازده اجاره تا ٪", body: "برآورد سود اجاره برای مقایسه فرصت‌ها." },
+              { icon: TrendingUp, title: "بازده اجاره تا ۱۰٪", body: "برآورد سود اجاره برای مقایسه فرصت‌ها." },
               { icon: CalendarRange, title: "اقساط تا ۶ سال", body: "بررسی شرایط پرداخت پروژه‌ها." },
             ].map(({ icon: Icon, title, body }) => (
               <div
@@ -153,7 +153,7 @@ function Hero() {
                   <Icon className="w-4.5 h-4.5 md:w-5 md:h-5" />
                 </div>
                 <div className="text-sm md:text-base font-extrabold text-foreground">{title}</div>
-                <p className="mt-1 text-[11px] md:text-xs text-muted-foreground leading-5">{body}</p>
+                <p className="mt-1 text-sm text-muted-foreground leading-5">{body}</p>
               </div>
             ))}
           </div>
@@ -188,7 +188,7 @@ function ProblemSection() {
           <div className="absolute inset-0 bg-gradient-to-l from-white/85 via-white/55 to-white/25 md:from-white/40 md:via-transparent md:to-transparent" />
 
           <div className="relative z-10 w-full md:w-1/2 md:ml-auto text-right">
-            <div className="text-xs font-semibold text-muted-foreground mb-3">
+            <div className="text-sm font-semibold text-muted-foreground mb-3">
               مسئله
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold text-primary leading-[1.2]">
@@ -196,7 +196,7 @@ function ProblemSection() {
               <br />
               <span className="text-foreground">انتخاب اشتباه است</span>
             </h2>
-            <p className="mt-4 text-sm md:text-base font-semibold text-muted-foreground">
+            <p className="mt-4 text-base md:text-lg font-semibold text-muted-foreground">
               بازتعریف روان‌شناسی تصمیم
             </p>
             <div className="mt-4 w-16 h-1 bg-primary rounded-full" />
@@ -207,7 +207,7 @@ function ProblemSection() {
               اما پروژه مناسب بودجه، هدف و ریسک‌پذیری شما کم است.
             </p>
 
-            <p className="mt-6 text-sm md:text-base text-foreground/90 md:text-muted-foreground leading-8 max-w-[20rem] sm:max-w-md">
+            <p className="mt-6 text-base md:text-lg text-foreground/90 md:text-muted-foreground leading-8 max-w-[20rem] sm:max-w-md">
               در بازاری که هر روز پروژه جدید معرفی می‌شود، تصمیم خوب از فیلترکردن گزینه‌ها شروع می‌شود.
               هر پروژه‌ای که جذاب به نظر می‌رسد، الزاماً برای بودجه، هدف یا زمان‌بندی شما مناسب نیست.
             </p>
@@ -229,7 +229,7 @@ function ProblemSection() {
                 <Filter className="w-5 h-5" />
                 قبل از خرید، شرایط خودتان را بررسی کنید
               </a>
-              <p className="text-xs text-muted-foreground">یک پروژه خوب برای همه مناسب نیست.</p>
+              <p className="text-sm text-muted-foreground">یک پروژه خوب برای همه مناسب نیست.</p>
             </div>
           </div>
         </div>
@@ -260,7 +260,7 @@ function ApproachSection() {
         {/* Desktop: radial compass */}
         <div className="hidden lg:block relative mx-auto mt-12 aspect-[16/9] max-w-4xl">
           <svg
-            viewBox="0 0 100 100"
+            viewBox="0 0 100 56.25"
             preserveAspectRatio="none"
             className="absolute inset-0 w-full h-full"
             aria-hidden="true"
@@ -304,7 +304,7 @@ function ApproachSection() {
                   <f.icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-sm font-extrabold text-foreground">{f.title}</h3>
-                <p className="mt-0.5 text-xs text-muted-foreground leading-5">{f.body}</p>
+                <p className="mt-0.5 text-sm text-muted-foreground leading-5">{f.body}</p>
               </div>
             </div>
           ))}
@@ -319,7 +319,7 @@ function ApproachSection() {
               </div>
               <div>
                 <h3 className="text-base font-extrabold text-foreground">{f.title}</h3>
-                <p className="mt-0.5 text-sm text-muted-foreground leading-6">{f.body}</p>
+                <p className="mt-0.5 text-base text-muted-foreground leading-6">{f.body}</p>
               </div>
               <span className="ms-auto text-2xl font-black text-primary/15">{f.n}</span>
             </div>
@@ -349,8 +349,8 @@ function AudienceFitSection() {
           subtitle="مسیر خرید برای همه یکسان نیست. هدف شما مشخص می‌کند چه گزینه‌هایی باید بررسی شوند."
         />
 
-        <div className="mt-10 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto md:overflow-visible">
-          <div className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 min-w-max md:min-w-0">
+        <div className="mt-10 -mx-5 px-5 md:mx-0 md:px-0 overflow-x-auto md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          <div className="flex md:grid md:grid-cols-3 lg:grid-cols-5 gap-4 min-w-max md:min-w-0 after:content-[''] after:block after:w-5 after:shrink-0 md:after:hidden">
             {goals.map((g) => (
               <div key={g.title} className="card-soft overflow-hidden w-64 md:w-auto shrink-0">
                 <div className="aspect-[4/3] w-full bg-surface">
@@ -358,12 +358,14 @@ function AudienceFitSection() {
                 </div>
                 <div className="p-5">
                   <h3 className="font-extrabold text-foreground">{g.title}</h3>
-                  <p className="mt-1.5 text-sm text-muted-foreground leading-6">{g.body}</p>
+                  <p className="mt-1.5 text-base text-muted-foreground leading-6">{g.body}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
+        <p className="mt-3 text-xs text-muted-foreground text-center md:hidden">← برای دیدن بیشتر بکشید</p>
 
         <div className="mt-8 text-center">
           <a href="#qualify" className="btn-primary">
@@ -410,11 +412,11 @@ function DataProofSection() {
                   <span className="inline-flex w-9 h-9 items-center justify-center rounded-lg bg-primary-soft text-primary">
                     <m.icon className="w-4.5 h-4.5" />
                   </span>
-                  <span className="text-xs font-semibold text-muted-foreground">{m.label}</span>
+                  <span className="text-sm font-semibold text-muted-foreground">{m.label}</span>
                 </div>
                 <div className="mt-4 text-3xl md:text-4xl font-extrabold text-primary">{m.value}</div>
                 <div className="mt-3 h-1 w-10 rounded-full bg-accent transition-all duration-300 group-hover:w-16" />
-                <div className="mt-3 text-sm text-muted-foreground leading-6">{m.caption}</div>
+                <div className="mt-3 text-base text-muted-foreground leading-6">{m.caption}</div>
               </div>
             </div>
           ))}
@@ -422,7 +424,7 @@ function DataProofSection() {
 
         <div className="mt-8 flex items-start gap-3 p-5 rounded-2xl border border-border bg-surface">
           <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-          <p className="text-sm md:text-base text-muted-foreground leading-7">
+          <p className="text-base md:text-lg text-muted-foreground leading-7">
             <strong className="text-foreground">توجه: </strong>
             هیچ عددی بدون بررسی پروژه و شرایط روز بازار نباید مبنای تصمیم نهایی باشد.
           </p>
@@ -459,7 +461,7 @@ function ClearOfferSection() {
               title={<>دقیقاً چه کمکی <span className="text-primary">دریافت می‌کنید؟</span></>}
               subtitle="هدف این نیست که فقط پروژه‌های بیشتری ببینید. هدف این است که گزینه‌های مناسب‌تر را سریع‌تر تشخیص دهید."
             />
-            <p className="mt-6 text-sm text-muted-foreground leading-7">
+            <p className="mt-6 text-base text-muted-foreground leading-7">
               برای شروع لازم نیست همه پاسخ‌ها را بدانید. اطلاعات اولیه کافی است.
             </p>
             <a href="#qualify" className="btn-primary mt-6 inline-flex">
@@ -475,7 +477,7 @@ function ClearOfferSection() {
                     <span className="inline-flex w-7 h-7 items-center justify-center rounded-lg bg-primary text-primary-foreground shrink-0">
                       <CheckCircle2 className="w-4 h-4" />
                     </span>
-                    <span className="text-sm md:text-base font-semibold text-foreground leading-6">{t}</span>
+                    <span className="text-base md:text-lg font-semibold text-foreground leading-6">{t}</span>
                   </li>
                 ))}
               </ul>
@@ -522,7 +524,7 @@ function PersonalTrustSection() {
               <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
                 مشاوره‌ای که بر شفافیت، دسترسی مستقیم و اطلاعات واقعی تکیه دارد
               </h2>
-              <p className="mt-4 text-white/85 leading-8 max-w-2xl">
+              <p className="mt-4 text-base md:text-lg text-white/85 leading-8 max-w-2xl">
                 نوید فاتح در دبی فعالیت می‌کند و از طریق Albandar Real Estate به فارسی‌زبانان برای بررسی گزینه‌های خرید ملک کمک می‌کند.
               </p>
               <div className="mt-6 flex flex-col gap-3">
@@ -534,7 +536,7 @@ function PersonalTrustSection() {
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-3">
                     <Icon className="w-5 h-5 text-white shrink-0" />
-                    <span className="text-sm font-semibold">{text}</span>
+                    <span className="text-base font-semibold">{text}</span>
                   </div>
                 ))}
               </div>
@@ -579,7 +581,7 @@ function PurchaseJourneySection() {
                 <div className="mx-auto inline-flex w-14 h-14 items-center justify-center rounded-full bg-primary text-primary-foreground border-4 border-background relative z-10">
                   <s.icon className="w-6 h-6" />
                 </div>
-                <div className="mt-3 text-xs font-bold text-primary">مرحله {i + 1}</div>
+                <div className="mt-3 text-sm font-bold text-primary">مرحله {i + 1}</div>
                 <div className="mt-1 font-extrabold text-foreground leading-6">{s.title}</div>
               </li>
             ))}
@@ -615,15 +617,15 @@ function SocialProofSection() {
           {items.map((it, i) => (
             <div key={i} className="card-soft p-5 flex flex-col">
               <Quote className="w-7 h-7 text-primary/30" />
-              <p className="mt-3 text-sm text-foreground/85 leading-7 flex-1">{it.text}</p>
+              <p className="mt-3 text-base text-foreground/85 leading-7 flex-1">{it.text}</p>
               <div className="mt-4 pt-4 border-t border-border flex items-center justify-between">
-                <span className="text-xs font-bold text-muted-foreground">{it.name}</span>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-primary-soft text-primary">{it.tag}</span>
+                <span className="text-sm font-bold text-muted-foreground">{it.name}</span>
+                <span className="text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full bg-primary-soft text-primary">{it.tag}</span>
               </div>
             </div>
           ))}
         </div>
-        <p className="mt-4 text-xs text-muted-foreground text-center">
+        <p className="mt-4 text-sm text-muted-foreground text-center">
           نمونه‌های واقعی به‌زودی با اجازه مشتریان جایگزین خواهد شد.
         </p>
         <div className="mt-8 text-center">
@@ -651,12 +653,12 @@ function CashVsInstallmentSection() {
         />
         <div className="mt-10 grid md:grid-cols-2 gap-5">
           {[
-            { title: "خرید نقدی", icon: Wallet, items: cash, tone: "bg-primary text-primary-foreground" },
-            { title: "خرید اقساطی", icon: CreditCard, items: inst, tone: "bg-surface text-foreground border border-border" },
+            { title: "خرید نقدی", icon: Wallet, items: cash, tone: "bg-primary text-primary-foreground", iconBg: "bg-white/15" },
+            { title: "خرید اقساطی", icon: CreditCard, items: inst, tone: "bg-surface text-foreground border border-border", iconBg: "bg-primary-soft text-primary" },
           ].map((col) => (
             <div key={col.title} className={`rounded-2xl p-6 md:p-8 ${col.tone}`}>
               <div className="flex items-center gap-3">
-                <div className="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-white/15">
+                <div className={`inline-flex w-12 h-12 items-center justify-center rounded-xl ${"iconBg" in col ? col.iconBg : "bg-white/15"}`}>
                   <col.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-2xl font-extrabold">{col.title}</h3>
@@ -665,7 +667,7 @@ function CashVsInstallmentSection() {
                 {col.items.map((t) => (
                   <li key={t} className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0 opacity-80" />
-                    <span className="text-sm md:text-base leading-7">{t}</span>
+                    <span className="text-base md:text-lg leading-7">{t}</span>
                   </li>
                 ))}
               </ul>
@@ -673,7 +675,7 @@ function CashVsInstallmentSection() {
           ))}
         </div>
         <div className="mt-6 flex items-center justify-center">
-          <p className="text-sm font-semibold text-muted-foreground">هیچ روش پرداختی برای همه مناسب نیست.</p>
+          <p className="text-base font-semibold text-muted-foreground">هیچ روش پرداختی برای همه مناسب نیست.</p>
         </div>
         <div className="mt-6 text-center">
           <a href="#qualify" className="btn-primary">
@@ -724,7 +726,7 @@ function FinalBanner() {
               <h3 className="text-2xl md:text-3xl font-extrabold leading-tight">
                 آماده‌اید مسیر خرید را با اطمینان شروع کنید؟
               </h3>
-              <p className="mt-2 text-white/85 text-sm md:text-base">
+              <p className="mt-2 text-white/85 text-base md:text-lg">
                 یک پیام کوتاه در واتساپ کافی است تا گزینه‌های مناسب بررسی شوند.
               </p>
             </div>

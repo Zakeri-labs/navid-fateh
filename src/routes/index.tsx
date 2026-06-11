@@ -354,7 +354,12 @@ function AudienceFitSection() {
             {goals.map((g) => (
               <div key={g.title} className="card-soft overflow-hidden w-64 md:w-auto shrink-0">
                 <div className="aspect-[4/3] w-full bg-surface">
-                  <img src={g.img} alt={g.title} className="w-full h-full object-contain" />
+                  <img
+                    src={g.img}
+                    alt={g.title}
+                    className="w-full h-full object-contain"
+                    style={{ maskImage: "linear-gradient(to bottom, transparent 0%, black 18%, black 78%, transparent 100%)" }}
+                  />
                 </div>
                 <div className="p-5">
                   <h3 className="font-extrabold text-foreground">{g.title}</h3>
